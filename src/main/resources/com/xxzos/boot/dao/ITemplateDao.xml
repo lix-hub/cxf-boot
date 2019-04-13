@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.xxzos.boot.dao.ITemplateDao" >
+
+    <select id="findName" resultType="com.xxzos.boot.vo.TemplateVO" >
+       SELECT user_id userId, user_name userName
+       FROM X_USER_T
+    </select>
+
+	<select id="findOne" resultType="com.xxzos.boot.vo.TemplateVO">
+		SELECT USER_ID userId,USER_NAME userName FROM X_USER_T
+		 WHERE USER_ID = #{userId}
+	</select>
+</mapper>
